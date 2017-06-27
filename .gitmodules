@@ -1,0 +1,9 @@
+[submodule "vendor/github.com/jackc/pgx"]
+	path = vendor/github.com/jackc/pgx
+	url = https://github.com/jackc/pgx
+[submodule "vendor/github.com/pkg/errors"]
+	path = vendor/github.com/pkg/errors
+	url = https://github.com/pkg/errors
+[submodule "vendor/github.com/stretchr/testify"]
+	path = vendor/github.com/stretchr/testify
+	url = https://github.com/stretchr/testify

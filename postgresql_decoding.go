@@ -6,6 +6,12 @@ import (
 	"unicode/utf8"
 )
 
+type pgDecode func([]byte, *ReplicationOperation) error
+
+var pgDecoders = map[string]pgDecode{
+	"test_decoding": pgTestDecoding{}.Parse,
+}
+
 func pgIsIdentifier(c rune) bool {
 	// https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIERS
 	return ('0' <= c && c <= '9') || (c == '$') || (c == '_') || unicode.IsLetter(c)
